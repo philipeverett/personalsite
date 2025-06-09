@@ -1,0 +1,276 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 40px;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.company-name {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #cccccc;
+}
+
+/* Background Particles Effect */
+.background-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 60% 70%, white, transparent),
+        radial-gradient(1px 1px at 50% 50%, white, transparent);
+    background-size: 400px 400px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Home Page Styles */
+.home-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.welcome-container {
+    text-align: center;
+    z-index: 10;
+}
+
+.welcome-title {
+    font-size: 80px;
+    font-weight: 300;
+    letter-spacing: 20px;
+    margin-bottom: 20px;
+}
+
+.welcome-subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 60px;
+    color: #cccccc;
+}
+
+/* Choice Page Styles */
+.choice-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.choice-container {
+    text-align: center;
+    z-index: 10;
+}
+
+.choice-title {
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+.choice-buttons {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+}
+
+/* Professional Page Styles */
+.professional-page {
+    padding-top: 80px;
+}
+
+.professional-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.professional-title {
+    font-size: 72px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 10px;
+    margin-bottom: 30px;
+}
+
+.linkedin {
+    font-size: 48px;
+    color: #0077b5;
+    margin-left: 20px;
+}
+
+.professional-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.professional-subtitle p {
+    margin-bottom: 10px;
+}
+
+.professional-summary {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 60px;
+    padding: 0 60px;
+}
+
+.career-snapshot {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.career-snapshot h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.achievement {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+/* Expandable Sections */
+.expandable-sections {
+    margin-bottom: 60px;
+}
+
+.expandable-section {
+    margin-bottom: 2px;
+    border-bottom: 1px solid #333333;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.section-header:hover {
+    padding-left: 10px;
+}
+
+.section-header h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.toggle-icon {
+    font-size: 30px;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    padding: 0;
+}
+
+.section-content.expanded {
+    max-height: 500px;
+    padding: 0 0 30px 0;
+}
+
+.section-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+/* Resume Link */
+.resume-link {
+    text-align: center;
+    margin: 60px 0;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary,
+.btn-choice {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-choice:hover {
+    background-color: #cccccc;
+    transform: translateY(-2px);
+}
+
+.btn-choice {
+    min-width: 200px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 50px;
+        letter-spacing: 10px;
+    }
+    
+    .professional-title {
+        font-size: 48px;
+        letter-spacing: 5px;
+    }
+    
+    .choice-buttons {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .professional-summary {
+        padding: 0 20px;
+    }
+    
+    .section-header h3 {
+        font-size: 18px;
+    }
+}
